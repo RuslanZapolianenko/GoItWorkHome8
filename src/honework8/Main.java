@@ -2,16 +2,18 @@ package honework8;
 
 public class Main {
     public static void main(String[] args) {
-        class GraphicEditor {
-            private Shape shape;
+        Circle circle = new Circle();
+        Quad quad = new Quad();
+        Triangle triangle = new Triangle();
+        Rectangle rectangle = new Rectangle();
+        Pentagon pentagon = new Pentagon();
 
-            public GraphicEditor(Shape shape) {
-                this.shape = shape;
-            }
+        GraphicEditor editor = new GraphicEditor();
+        editor.printShapeName(circle);     // Виведе "Circle"
+        editor.printShapeName(quad);       // Виведе "Quad"
+        editor.printShapeName(triangle);   // Виведе "Triangle"
+        editor.printShapeName(rectangle);  // Виведе "Rectangle"
+        editor.printShapeName(pentagon);   // Виведе "Pentagon"
 
-            public void printShapeName() {
-                System.out.println(shape.getName());
-            }
-        }
     }
 }
